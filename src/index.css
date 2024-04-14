@@ -1,0 +1,197 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.ant-btn-primary {
+  background-color: red;
+}
+
+.movie-card {
+  width: 200px;
+  margin-right: 25px;
+  border: 0.1rem solid #efeeee;
+}
+
+.add-movie-to-watchlist-button {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.movie-watched-button{
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border: none;
+}
+
+.movie-card-poster {
+  width: 200px;
+  height: 150px;
+  object-fit: contain;
+}
+
+.home-content-page {
+  padding: 25px;
+}
+
+.welcome-home-box {
+  padding: 0px 15px;
+  border: 1px solid #c81919;
+  border-radius: 8px;
+  height: 23vh;
+}
+
+.main-heading-box {
+  display: flex;
+  margin-bottom: -15px;
+}
+
+.watchlist-heading-box {
+  color: red;
+}
+
+.para {
+  font-weight: 400;
+  font-size: medium;
+}
+
+.search-box{
+  display: flex;
+}
+
+.movie-card-row {
+  max-height: 55vh;
+  overflow: auto;
+}
+
+.movie-card-column {
+  padding: 15px 0;
+}
+
+.watchlists-panel-heading {
+  text-align: center;
+  font-size: xx-large;
+  font-weight: 800;
+}
+
+.watchlist-search-box {
+  display: flex;
+  margin: 5px;
+}
+
+.home-button {
+  width: 80%;
+  margin: 0 34px;
+}
+
+.my-list-heading {
+  font-size: large;
+  font-weight: 400;
+  color: black;
+  margin: 0 34px;
+}
+
+.login-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+  margin: 0 34px;
+  position: absolute;
+  bottom: 25px;
+  border: 0.1rem solid #efeeee;
+}
+
+.user-icon {
+  margin: 5px;
+}
+
+.user-label {
+  font-size: large;
+  font-weight: 400;
+  color: black;
+}
+
+.modal-container {
+  top: 20;
+}
+
+.error-msg {
+  color: red;
+}
+
+.create-watchlist {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.save-watchlist-button {
+  display: flex;
+  justify-content: end;
+}
+
+.create-watchlist-link {
+  text-decoration: underline;
+  color: red;
+}
+
+.watchlist-page-container {
+  padding: 25px;
+}
+
+.watchlist-movie-card-row {
+  max-height: 70vh;
+  overflow: auto;
+}
+
+.check-icon {
+  color: #fff;
+}
+
+.my-list-container {
+  overflow-y: scroll;
+  max-height: 50vh;
+}
+
+.list {
+    display: flex;
+    align-items: center;
+    border: 0.1rem solid #efeeee;
+    width: 77%;
+    margin: 0px 34px;
+    border-radius: 8px;
+    margin-bottom: 5px;
+    height: 50px;
+}
+
+.right-arrow {
+  margin-right: 45px;
+  margin-left: 10px;
+}
+
+.watchlist-name {
+  color: red;
+}
+
+.footer-left-text {
+  text-align: left;
+  margin-top: -8px;
+}
+
+.footer-right-text {
+  text-align: right;
+  margin-top: -20px;
+}
+
+.list-of-watchlists {
+  overflow: auto;
+  max-height: 20vh;
+}
