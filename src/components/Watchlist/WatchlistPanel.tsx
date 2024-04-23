@@ -15,12 +15,16 @@ import Login from "../Auth/login";
 import { Link } from "react-router-dom";
 import { useWatchLists } from "../../context/WatchListsContext";
 import Watchlist from "./Watchlist";
+import { WatchListModal } from "../../shared/modals/movie";
 
 const WatchlistPanel: React.FC = () => {
   const [userLabel, setUserLabel] = useState<string>("GUEST");
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
   const [messageApi, contextHolder] = message.useMessage();
   const { watchLists: userWatchLists } = useWatchLists();
+  const [displayWatchLists, setDisplayWatchlists] =
+    useState<WatchListModal[]>(userWatchLists);
+
   const loginMenuItem = {
     items: [
       {
@@ -59,7 +63,8 @@ const WatchlistPanel: React.FC = () => {
 
   useEffect(() => {
     onEmailChange();
-  }, [userEmail]);
+    setDisplayWatchlists(userWatchLists);
+  }, [userEmail, userWatchLists]);
 
   const handleLogout = () => {
     messageApi.open({
@@ -83,8 +88,13 @@ const WatchlistPanel: React.FC = () => {
       <Divider />
       <h3 className="my-list-heading">My Lists</h3> <br />
       <div className="my-list-container">
-        {userWatchLists.map((watchList) => (
-          <Watchlist key={watchList.id} watchList={watchList} />
+        {displayWatchLists.map((watchList) => (
+          <Watchlist
+            key={watchList.id}
+            watchList={watchList}
+            userEmail={userEmail}
+            setDisplayWatchlists={setDisplayWatchlists}
+          />
         ))}
       </div>
       <Login isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />

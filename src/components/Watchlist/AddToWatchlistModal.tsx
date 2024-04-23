@@ -79,7 +79,7 @@ const AddToWatchListModal: React.FC<WatchlistReactProps> = ({
     setNewWatchListName("");
   };
 
-
+  // function to add the movie to the checked watchlists
   const addToSelectedWatchLists = () => {
     const userData = fetchUserData();
     if (!userEmail || !userData) return;
@@ -92,7 +92,6 @@ const AddToWatchListModal: React.FC<WatchlistReactProps> = ({
     setIsModalOpen(false);
   };
 
-  // function to add the movie to the checked watchlists
   const addItemToWatchList = (
     watchListId: string,
     movie: MovieApiModel,

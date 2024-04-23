@@ -164,6 +164,7 @@ body {
 .list {
     display: flex;
     align-items: center;
+    justify-content: space-around;
     border: 0.1rem solid #efeeee;
     width: 77%;
     margin: 0px 34px;
@@ -173,8 +174,12 @@ body {
 }
 
 .right-arrow {
-  margin-right: 45px;
-  margin-left: 10px;
+  /* margin-right: 45px;
+  margin-left: 10px; */
+}
+
+.delete-icon {
+  right: 0;
 }
 
 .watchlist-name {

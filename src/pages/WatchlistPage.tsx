@@ -40,7 +40,13 @@ const WatchlistPage: React.FC = () => {
             watchList.watchListItems.map((wl) => {
               return (
                 <Col key={wl.imdbID} span={6} className="movie-card-column">
-                  <MovieCard movie={wl} origin="watchlist" />
+                  <MovieCard
+                    movie={wl}
+                    origin="watchlist"
+                    watchListId={watchList.id}
+                    movId={wl.imdbID}
+                    setWatchList={setWatchList}
+                  />
                 </Col>
               );
             })}

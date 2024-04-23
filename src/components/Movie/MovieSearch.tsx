@@ -68,7 +68,13 @@ const MovieSearch = () => {
         {searchedMovies.map((movie) => {
           return (
             <Col span={6} className="movie-card-column" key={movie.imdbID}>
-              <MovieCard movie={getWatchListItemObj(movie)} origin="search" />
+              <MovieCard
+                movie={getWatchListItemObj(movie)}
+                origin="search"
+                watchListId="null"
+                movId={movie.imdbID}
+                setWatchList={() => {}}
+              />
             </Col>
           );
         })}
